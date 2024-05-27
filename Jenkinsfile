@@ -22,30 +22,30 @@ pipeline {
                echo "Test the code"
                 sh 'mvn test'
             }
-            post{
-                always{
-                    junit 'target/surefire-reports/*.xml'
-                }
-            }
+            //post{
+                //always{
+                    //junit 'target/surefire-reports/*.xml'
+               // }
+            //}
         }
         stage('Package') {
             agent {label 'Slave1'}
             steps {
-               echo "Package the code in env: ${params.Env}"
+               //echo "Package the code in env: ${params.Env}"
                 sh 'mvn package'
             }
         }
-         stage('Deploy') {
-             input{
-                 message "Provide Approval for Prod"
-                 ok "Deploy to Prod"
-                 parameters{
-                     booleanParam(name:'DeploytoPROD',defaultValue:False,description:'decide to run in Prod')
-                 }
-             }
-            steps {
-               echo "Deploy the code"
-            }
-        }
+         //stage('Deploy') {
+             //input{
+                 //message "Provide Approval for Prod"
+                 //ok "Deploy to Prod"
+                 //parameters{
+                    // booleanParam(name:'DeploytoPROD',defaultValue:False,description:'decide to run in Prod')
+                 //}
+             //}
+            //steps {
+               //echo "Deploy the code"
+            //}
+        //}
     }
 }
