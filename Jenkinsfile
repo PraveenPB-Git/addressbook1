@@ -10,6 +10,7 @@ pipeline {
         stage('Compile') {
             steps {
                echo "compiling teh code"
+                sh 'mvn compile'
             }
         }
         stage('UnitTest') {
