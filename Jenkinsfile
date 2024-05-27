@@ -1,7 +1,7 @@
 pipeline {
     agent any
     parameters {
-        string(name:'Env',defaultvalue:'Test',description:'Env to display')
+        string(name:'Env',defaultValue:'Test',description:'Env to display')
     }
     //tools {
         // Install the Maven version configured as "M3" and add it to the path.
