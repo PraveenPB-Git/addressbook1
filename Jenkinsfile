@@ -21,6 +21,7 @@ pipeline {
             }
         }
         stage('Package') {
+            agent {label 'linux_slave'}
             steps {
                echo "Package the code in env: ${params.Env}"
             }
