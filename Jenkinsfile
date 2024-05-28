@@ -9,6 +9,9 @@ pipeline {
         // Install the Maven version configured as "M3" and add it to the path.
         //maven "mymaven"
     //}
+        environment{
+        BUILD_SERVER='ec2-user@172.31.19.247'
+    }
 
     stages {
         stage('Compile') {
