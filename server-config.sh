@@ -7,7 +7,7 @@ sudo yum install java-1.8.0-openjdk-devel -y
 if [ -d "addressbook1" ]
 then
    echo "repo is already cloned and exists"
-   git config --global --add safe.directory /home/ec2-user/addressbook1
+   #git config --global --add safe.directory /home/ec2-user/addressbook1
    cd /home/ec2-user/addressbook1
    git pull origin master
 else
