@@ -36,6 +36,8 @@ pipeline {
             steps {
                 sshagent(['build-server-key']) {
                    echo 'Package using Slave 2 via SSH Agent Plugin'
+                    sh "scp -o StrictHostKeyChecking=no server-config.sh ${BUILD_SERVER}:/home/ec2-user"
+                    sh "ssh -o StrictHostKeyChecking=no ${BUILD_SERVER} bash ~ec2-user/server-config.sh"
                }
                //echo "Package the code in env: ${params.Env}"
             }
