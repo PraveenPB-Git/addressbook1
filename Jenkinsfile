@@ -31,8 +31,10 @@ pipeline {
         stage('Package') {
             agent any
             steps {
+                sshagent(['build-server-key']) {
+                   echo 'Package using Slave 2 via SSH Agent Plugin'
+               }
                //echo "Package the code in env: ${params.Env}"
-                sh 'mvn package'
             }
         }
          //stage('Deploy') {
