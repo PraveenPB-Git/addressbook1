@@ -1,7 +1,7 @@
 pipeline {
     agent any
     parameters {
-        string(name:'Env',defaultValue:'Test',description:'Env to display')
+        //string(name:'Env',defaultValue:'Test',description:'Env to display')
         //booleanParam(name:'ExecuteTests',defaultValue:True,description:'decide to run tc')
         //choice(name:APPVERSION,choices['1.1','1.2','1.3'])
     }
