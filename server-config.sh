@@ -8,7 +8,7 @@ if [ -d "addressbook1" ]
 then
    echo "repo is already cloned and exists"
    cd /home/ec2-user/addressbook1
-#git pull origin master
+   git pull origin master
 else
    git clone https://github.com/PraveenPB-Git/addressbook1.git
    cd addressbook1
