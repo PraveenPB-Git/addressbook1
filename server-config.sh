@@ -14,6 +14,9 @@ else
    cd addressbook1
    git checkout master
 fi
+mvn package
+sudo yum install docker -y
+sudo systemctl start docker
 #export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.402.b06-1.amzn2.0.1.x86_64
 #export PATH=$JAVA_HOME/bin:$PATH
 #source /etc/profile
